@@ -3,5 +3,5 @@ module.exports = {
   port: 3001,
   secret: 'tangdaiqing',
   dbURL: 'mongodb://localhost/wangming-jwt',
-  expiresIn: '24h'
+  expiresIn: 86400000
 };

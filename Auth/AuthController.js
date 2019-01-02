@@ -18,7 +18,7 @@ router.post('/register', (req, res) => {
     }
     // if user is registered without errors, create a token
     const token = jwt.sign({ id: user._id }, secret, { expiresIn });
-    res.status(200).json({ success: true, token });
+    res.status(200).json({ success: true, data: { token, expiresIn } });
   });
 });
 
@@ -42,7 +42,7 @@ router.post('/login', (req, res) => {
 
     // create a token
     const token = jwt.sign({ id: user._id }, secret, { expiresIn });
-    res.status(200).json({ success: true, token });
+    res.status(200).json({ success: true, data: { token, expiresIn } });
   });
 });
 
